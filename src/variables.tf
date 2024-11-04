@@ -3,11 +3,13 @@
 
 variable "cloud_id" {
   type        = string
+  default     = "b1gcd1nmr4tl1hd9duc8"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/cloud/get-id"
 }
 
 variable "folder_id" {
   type        = string
+  default     = "b1gj6ia0559mol9ufg9k"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
 
@@ -28,11 +30,15 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
+variable "token"{
+  type        = string
+  description = "enter secret token"
+}
 
 ###ssh vars
 
 variable "vms_ssh_root_key" {
   type        = string
-  default     = "<your_ssh_ed25519_key>"
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlLc9tAx9tK7/MK+4I0n7a535xrIX+GT/DRwJpxEmojEmgZXwHtLJtBQTAFjV70ZwDfB9amWHZiWyigP9UP5o5YntsNhm3wXCRS/AbLbgt1foxGpGXsDqnPb0+LyFzxMl2WlKHxH84bZ0GMFp7/TKgacxZlEMz1QFuLyU4QIW8PyyFGdblHbnXz7Dp+PgEd6nRlnjNH/hP+o+0wGOhgDwUTS0gAlJOMxSJglD7ixBwuZURYlE1sgBF7lnJQfHTwVh+huJFaZDCGwA2NG2PUWbECG85joUsqpa4ofunxiHkyp23TQJMVxGAne+42FnzwWuYDJFAlEW5gdBXn+RYj1qLoqKLnIAPQ6ZvCdt3+cjgKje3x4k6vLSSeaBPQp1aShdoD9vRQ/TlGw2ebN0H/EFlPEasg5PGMqVehfGoJGRu/RN5MLjnT8XKM3wc7Kkft+d8EzRJtsYCPn53N6Bt0gsHvszKHueI8PKF+5bC8NXYHtStDLlIWEbbORPAuK/2Z70= seregin@msk-s3-arm076"
   description = "ssh-keygen -t ed25519"
 }
