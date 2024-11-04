@@ -1,5 +1,25 @@
 ###cloud vars
 
+variable cloud {
+  type = map(object({
+    cloud_id = string
+    folder_id = string
+    default_zone = string
+    default_cidr = list(string)
+    vpc_name = string
+  }))
+    default = { 
+      "develop" = {
+        cloud_id = "b1gcd1nmr4tl1hd9duc8"
+        folder_id = "b1gj6ia0559mol9ufg9k"
+        default_zone = "ru-central1-a"
+        default_cidr = ["10.0.1.0/24"]
+        vpc_name = "develop"
+      }
+  }
+}
+
+/*
 
 variable "cloud_id" {
   type        = string
@@ -29,7 +49,7 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network & subnet name"
 }
-
+*/
 variable "token"{
   type        = string
   description = "enter secret token"
